@@ -1,8 +1,4 @@
-.. _language:
-
-Supported Languages
-====================
-
+# Supported Languages
 Jatana speakes **120 languages**, which are
 
 

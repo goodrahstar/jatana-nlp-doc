@@ -7,8 +7,8 @@ site_url: ''
 
 
 # Repository
-repo_name: 'jatana-nlp-microservices'
-repo_url: 'https://github.com/jatana-ai/jatana-nlp-microservices'
+repo_name: 'jatana-nlp-doc'
+repo_url: 'https://github.com/goodrahstar/jatana-nlp-doc/'
 
 # Copyright
 copyright: 'Copyright &copy; 2019 Rahul Kumar'
