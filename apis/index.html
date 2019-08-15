@@ -13,6 +13,8 @@
         <meta name="description" content="All the details to integrate and use Jatana AI">
       
       
+        <link rel="canonical" href="https://www.jatana.ai/apis/">
+      
       
         <meta name="author" content="Rahul Kumar">
       
@@ -98,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Jatana AI" class="md-header-nav__button md-logo">
+        <a href="https://www.jatana.ai" title="Jatana AI" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -190,7 +192,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="Jatana AI" class="md-nav__button md-logo">
+    <a href="https://www.jatana.ai" title="Jatana AI" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -319,15 +321,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#query-route-tf-serving-version" title="Query Route [TF Serving Version]" class="md-nav__link">
-    Query Route [TF Serving Version]
+  <a href="#tf-serving-version" title="TF Serving Version" class="md-nav__link">
+    TF Serving Version
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#query-route-wrapper-version" title="Query Route [WRAPPER VERSION]" class="md-nav__link">
-    Query Route [WRAPPER VERSION]
+  <a href="#custom-version" title="Custom version" class="md-nav__link">
+    Custom version
   </a>
   
 </li>
@@ -423,15 +425,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#query-route-tf-serving-version" title="Query Route [TF Serving Version]" class="md-nav__link">
-    Query Route [TF Serving Version]
+  <a href="#tf-serving-version" title="TF Serving Version" class="md-nav__link">
+    TF Serving Version
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#query-route-wrapper-version" title="Query Route [WRAPPER VERSION]" class="md-nav__link">
-    Query Route [WRAPPER VERSION]
+  <a href="#custom-version" title="Custom version" class="md-nav__link">
+    Custom version
   </a>
   
 </li>
@@ -469,18 +471,19 @@
 </code></pre>
 
 <p><strong>Response</strong></p>
-<pre><code>
-    {
+<pre><code>    {
       &quot;Engine Status&quot; : &quot;Microservice for UPLOAD is alive and kicking&quot;
     }
 </code></pre>
 
 <h3 id="upload-route">Upload Route</h3>
 <p>This API is used to send the JSON data to the Upload service</p>
-<p>.. todo:: Add data format reference or sample</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Add data format reference or sample</p>
+</div>
 <p><strong>Request</strong></p>
-<pre><code>
-    import requests
+<pre><code>    import requests
 
     url = &quot;http://localhost:8080/api/ms/v3.0/upload&quot;
 
@@ -498,19 +501,23 @@
 </code></pre>
 
 <p><strong>Response</strong></p>
-<pre><code>
-    {
+<pre><code>    {
     'Message' : 'Training Successsful' 
     }
 </code></pre>
 
 <h3 id="training-route">Training Route</h3>
-<p>.. warning:: This endpoint is for internal use only.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This endpoint is for internal use only.</p>
+</div>
 <p>This training endpoint is a backdoor to train any model on ML ENGINE which is only to be used by the AI Team.</p>
-<p>.. todo:: Add params for <code>lang</code> </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Add params for <code>lang</code> </p>
+</div>
 <p><strong>Request</strong></p>
-<pre><code>
-    import requests
+<pre><code>    import requests
 
     url = &quot;https://localhost:8080/api/ms/v3.0/train&quot;
 
@@ -526,19 +533,21 @@
 </code></pre>
 
 <p><strong>Response</strong></p>
-<pre><code>
-    {
+<pre><code>    {
     'job_name' : 'new_cleint_ml_jos12344',
     'job_result': 'Model Trained' 
     }
 </code></pre>
 
 <h2 id="for-query-apis">For Query API's</h2>
-<h3 id="query-route-tf-serving-version">Query Route [TF Serving Version]</h3>
-<p>.. note:: The <code>instances</code> object in json needs to be a list of int of 100 elements.</p>
+<p>Below are the endpoints to make query on trained models for predictions. </p>
+<h3 id="tf-serving-version">TF Serving Version</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code>instances</code> object in json needs to be a list of int of 100 elements.</p>
+</div>
 <p><strong>Request</strong></p>
-<pre><code>
-    curl -X POST \
+<pre><code>    curl -X POST \
       http://localhost:8501/v1/models/jatanademo_macro:predict \
       -d '{
         &quot;signature_name&quot;: &quot;predict&quot;,
@@ -648,8 +657,7 @@
 </code></pre>
 
 <p><strong>Response</strong></p>
-<pre><code>
-    {&quot;predictions&quot;: [[
+<pre><code>    {&quot;predictions&quot;: [[
                 2.36913e-16,
                 5.55834e-32,
                 2.54004e-7,
@@ -659,9 +667,12 @@
         ]}
 </code></pre>
 
-<h3 id="query-route-wrapper-version">Query Route [WRAPPER VERSION]</h3>
+<h3 id="custom-version">Custom version</h3>
 <p><strong>Request</strong></p>
-<p>.. todo:: Fix Payload</p>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>Fix Payload</p>
+</div>
 <pre><code>    import requests
 
     url = &quot;http://localhost:8080/api/ms/v3.0/query&quot;

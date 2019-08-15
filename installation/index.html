@@ -13,6 +13,8 @@
         <meta name="description" content="All the details to integrate and use Jatana AI">
       
       
+        <link rel="canonical" href="https://www.jatana.ai/installation/">
+      
       
         <meta name="author" content="Rahul Kumar">
       
@@ -98,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Jatana AI" class="md-header-nav__button md-logo">
+        <a href="https://www.jatana.ai" title="Jatana AI" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -190,7 +192,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="Jatana AI" class="md-nav__button md-logo">
+    <a href="https://www.jatana.ai" title="Jatana AI" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -586,15 +588,13 @@
 <h2 id="setting-up-upload-server">Setting up Upload Server</h2>
 <p>Follow the instruction to setup the upload server.</p>
 <h3 id="config-server">Config server</h3>
-<pre><code>
-    sudo apt-get update
+<pre><code>    sudo apt-get update
     sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 </code></pre>
 
 <h3 id="get-the-code">Get the code</h3>
 <p>Clone the repository </p>
-<pre><code>
-    git clone https://github.com/jatana-ai/jatana-nlp-microservices
+<pre><code>    git clone https://github.com/jatana-ai/jatana-nlp-microservices
 </code></pre>
 
 <p>Unless you've already got numpy &amp; scipy installed, we highly recommend that you install and use <a class="reference external" href="https://www.anaconda.com/download/" target="_blank">Anaconda</a>.</p>
@@ -621,29 +621,25 @@
 </code></pre>
 
 <h3 id="test-jatanaai">Test JatanaAI</h3>
-<pre><code>
-    GET locahost:8080/api/ms/v3.0/ignition
+<pre><code>    GET locahost:8080/api/ms/v3.0/ignition
 </code></pre>
 
 <p>and returns response</p>
-<pre><code>
-    {
+<pre><code>    {
       &quot;Engine Status&quot; : &quot;Microservice for UPLOAD is alive and kicking&quot;
     }
 </code></pre>
 
 <h2 id="setting-up-serving-server">Setting up Serving Server</h2>
 <h3 id="config-server_1">Config server</h3>
-<pre><code>
-    sudo apt-get update
+<pre><code>    sudo apt-get update
     sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
     sudo apt-get install gcsfuse
     sudo apt install docker.io
 </code></pre>
 
 <h3 id="setup-gcfuse">Setup GCFuse</h3>
-<pre><code>
-    export GCSFUSE_REPO=gcsfuse-`lsb_release -c -s`
+<pre><code>    export GCSFUSE_REPO=gcsfuse-`lsb_release -c -s`
     echo &quot;deb http://packages.cloud.google.com/apt $GCSFUSE_REPO main&quot; | sudo tee /etc/apt/sources.list.d/gcsfuse.list
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
@@ -652,21 +648,21 @@
 
 <h3 id="get-the-code_1">Get the code</h3>
 <p>Clone the repository </p>
-<pre><code>
-    git clone https://github.com/jatana-ai/jatana-nlp-microservices
+<pre><code>    git clone https://github.com/jatana-ai/jatana-nlp-microservices
     cd /jatana-nlp-microservices/jatana-ms-train-v2/trainer
     mkdir data
     gcsfuse --implicit-dirs jatana-nlp-storage data/
 </code></pre>
 
 <h3 id="get-tensorflow-serving-docker-image">Get Tensorflow serving docker image</h3>
-<pre><code>
-    docker pull tensorflow/serving
+<pre><code>    docker pull tensorflow/serving
 </code></pre>
 
 <h3 id="run-the-serving">Run the serving</h3>
-<pre><code>
-    docker run  -p 8500:8500 -p 8501:8501 --mount type=bind,source=/home/projects/jatana-nlp-microservices/jatana-ms-train-v2/trainer/data/export/,target=/models/ -t tensorflow/serving --model_config_file=/models/models.config
+<pre><code>    docker run  -p 8500:8500 -p 8501:8501 \
+            --mount type=bind,source=/home/projects/jatana-nlp-microservices/jatana-ms-train-v2/trainer/data/export/,target=/models/ \
+            -t tensorflow/serving \
+            --model_config_file=/models/models.config
 </code></pre>
 
 <h3 id="testing">Testing</h3>
@@ -674,14 +670,12 @@
 <h4 id="model-status-api">Model status API</h4>
 <p>If you want to check the status of the model if can be done using</p>
 <p><strong>Request</strong></p>
-<pre><code>
-    GET http://host:port/v1/models/${MODEL_NAME}[/versions/${MODEL_VERSION}]
+<pre><code>    GET http://host:port/v1/models/${MODEL_NAME}[/versions/${MODEL_VERSION}]
 </code></pre>
 
 <p><code>/versions/${MODEL_VERSION}</code> is optional. If omitted status for all versions is returned in the response.</p>
 <p><strong>Response</strong></p>
-<pre><code>
-    {
+<pre><code>    {
         &quot;model_version_status&quot;: [
             {
                 &quot;version&quot;: &quot;3&quot;,
@@ -698,19 +692,16 @@
 <h4 id="model-metadata-api">Model Metadata API</h4>
 <p>It returns the metadata of a model in the ModelServer. It returns the metadata of a model in the ModelServer.</p>
 <p><strong>Request</strong></p>
-<pre><code>
-    GET http://host:port/v1/models/${MODEL_NAME}[/versions/${MODEL_VERSION}]/metadata
+<pre><code>    GET http://host:port/v1/models/${MODEL_NAME}[/versions/${MODEL_VERSION}]/metadata
 </code></pre>
 
 <p><code>/versions/${MODEL_VERSION}</code> is optional. If omitted status for all versions is returned in the response.</p>
 <p>Example:</p>
-<pre><code>
-    GET http://localhost:8501/v1/models/jatanademo_macro/metadata
+<pre><code>    GET http://localhost:8501/v1/models/jatanademo_macro/metadata
 </code></pre>
 
 <p><strong>Response</strong></p>
-<pre><code>
-    {
+<pre><code>    {
         &quot;model_spec&quot;: {
             &quot;name&quot;: &quot;jatanademo_macro&quot;,
             &quot;signature_name&quot;: &quot;&quot;,
