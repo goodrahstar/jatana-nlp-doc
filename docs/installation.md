@@ -184,7 +184,7 @@ If you want to check the status of the model if can be done using
 
 #### Model Metadata API
 
-It returns the metadata of a model in the ModelServer. It returns the metadata of a model in the ModelServer.
+It returns the metadata of a model in the ModelServer.
 
 
 **Request**
