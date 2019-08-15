@@ -18,7 +18,6 @@ To test if the service is up and running.
 **Response**
 
 ```
-
     {
       "Engine Status" : "Microservice for UPLOAD is alive and kicking"
     }
@@ -31,12 +30,12 @@ To test if the service is up and running.
 
 This API is used to send the JSON data to the Upload service
 
-.. todo:: Add data format reference or sample
+!!! note 
+    Add data format reference or sample
 
 **Request**
 
 ```
-
 	import requests
 
 	url = "http://localhost:8080/api/ms/v3.0/upload"
@@ -57,7 +56,6 @@ This API is used to send the JSON data to the Upload service
 **Response**
 
 ```
-
 	{
 	'Message' : 'Training Successsful' 
 	}
@@ -66,18 +64,19 @@ This API is used to send the JSON data to the Upload service
 ### Training Route
 
 
-.. warning:: This endpoint is for internal use only.
+!!! warning 
+    This endpoint is for internal use only.
 
 This training endpoint is a backdoor to train any model on ML ENGINE which is only to be used by the AI Team.
 
 
 
-.. todo:: Add params for `lang` 
+!!! note 
+    Add params for `lang` 
 
 **Request**
 
-```
-	
+```	
 	import requests
 
 	url = "https://localhost:8080/api/ms/v3.0/train"
@@ -97,7 +96,6 @@ This training endpoint is a backdoor to train any model on ML ENGINE which is on
 
 
 ```
-
 	{
 	'job_name' : 'new_cleint_ml_jos12344',
 	'job_result': 'Model Trained' 
@@ -109,16 +107,17 @@ This training endpoint is a backdoor to train any model on ML ENGINE which is on
 
 ## For Query API's
 
+Below are the endpoints to make query on trained models for predictions. 
 
 
-### Query Route [TF Serving Version]
+### TF Serving Version
 
-.. note:: The ``instances`` object in json needs to be a list of int of 100 elements.
+!!! warning 
+    The ``instances`` object in json needs to be a list of int of 100 elements.
 
 **Request**
 
 ```
-
 	curl -X POST \
 	  http://localhost:8501/v1/models/jatanademo_macro:predict \
 	  -d '{
@@ -231,7 +230,6 @@ This training endpoint is a backdoor to train any model on ML ENGINE which is on
 **Response**
 
 ```
-
 	{"predictions": [[
 	            2.36913e-16,
 	            5.55834e-32,
@@ -242,12 +240,13 @@ This training endpoint is a backdoor to train any model on ML ENGINE which is on
 	    ]}
 ```	
 
-### Query Route [WRAPPER VERSION]
+### Custom version
 
 
 **Request**
 
-.. todo:: Fix Payload
+!!! bug
+    Fix Payload
 
 ```
 	import requests

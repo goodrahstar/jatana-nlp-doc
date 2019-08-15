@@ -29,7 +29,6 @@ Follow the instruction to setup the upload server.
 
 
 ```
-
     sudo apt-get update
     sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 ```
@@ -40,7 +39,6 @@ Follow the instruction to setup the upload server.
 Clone the repository 
 
 ```
-
     git clone https://github.com/jatana-ai/jatana-nlp-microservices
 ```
 
@@ -76,13 +74,11 @@ Unless you've already got numpy & scipy installed, we highly recommend that you 
 
 
 ```
-
     GET locahost:8080/api/ms/v3.0/ignition
 ```
 and returns response
 
 ```
-
     {
       "Engine Status" : "Microservice for UPLOAD is alive and kicking"
     }
@@ -101,7 +97,6 @@ and returns response
 
 
 ```
-
     sudo apt-get update
     sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
     sudo apt-get install gcsfuse
@@ -112,7 +107,6 @@ and returns response
 
 
 ```
-
     export GCSFUSE_REPO=gcsfuse-`lsb_release -c -s`
     echo "deb http://packages.cloud.google.com/apt $GCSFUSE_REPO main" | sudo tee /etc/apt/sources.list.d/gcsfuse.list
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
@@ -126,7 +120,6 @@ and returns response
 Clone the repository 
 
 ```
-
     git clone https://github.com/jatana-ai/jatana-nlp-microservices
     cd /jatana-nlp-microservices/jatana-ms-train-v2/trainer
     mkdir data
@@ -137,7 +130,6 @@ Clone the repository
 
 
 ```
-
     docker pull tensorflow/serving
 ```
 
@@ -145,8 +137,10 @@ Clone the repository
 
 
 ```
-    
-    docker run  -p 8500:8500 -p 8501:8501 --mount type=bind,source=/home/projects/jatana-nlp-microservices/jatana-ms-train-v2/trainer/data/export/,target=/models/ -t tensorflow/serving --model_config_file=/models/models.config
+    docker run  -p 8500:8500 -p 8501:8501 \
+            --mount type=bind,source=/home/projects/jatana-nlp-microservices/jatana-ms-train-v2/trainer/data/export/,target=/models/ \
+            -t tensorflow/serving \
+            --model_config_file=/models/models.config
 ```
 
 
@@ -165,7 +159,6 @@ If you want to check the status of the model if can be done using
 **Request**
 
 ```
-
     GET http://host:port/v1/models/${MODEL_NAME}[/versions/${MODEL_VERSION}]
 ```
 
@@ -175,7 +168,6 @@ If you want to check the status of the model if can be done using
 **Response**
 
 ```
-
     {
         "model_version_status": [
             {
@@ -198,7 +190,6 @@ It returns the metadata of a model in the ModelServer. It returns the metadata o
 **Request**
 
 ```
-
     GET http://host:port/v1/models/${MODEL_NAME}[/versions/${MODEL_VERSION}]/metadata
 ```
 
@@ -208,14 +199,12 @@ It returns the metadata of a model in the ModelServer. It returns the metadata o
 Example:
 
 ```
-
     GET http://localhost:8501/v1/models/jatanademo_macro/metadata
 ```
 
 **Response**
 
 ```
-
     {
         "model_spec": {
             "name": "jatanademo_macro",

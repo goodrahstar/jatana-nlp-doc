@@ -11,7 +11,7 @@ JatanaAI is a deep learning based end-to-end natural language platform. JatanaAI
 - Python 2.7/3.6
 - Java8+
 - Ubuntu 16.x
-
+- GCP Account
 
 ## Key competencies
 
