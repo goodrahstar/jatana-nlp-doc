@@ -1,0 +1,847 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="All the details to integrate and use Jatana AI">
+      
+      
+      
+        <meta name="author" content="Rahul Kumar">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Installation - Jatana AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#installation" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Jatana AI" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Jatana AI
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Installation
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/jatana-ai/jatana-nlp-microservices/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jatana-nlp-microservices
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Jatana AI" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Jatana AI
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/jatana-ai/jatana-nlp-microservices/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jatana-nlp-microservices
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Get Started" class="md-nav__link">
+      Get Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Installation
+      </label>
+    
+    <a href="./" title="Installation" class="md-nav__link md-nav__link--active">
+      Installation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-upload-server" title="Setting up Upload Server" class="md-nav__link">
+    Setting up Upload Server
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config-server" title="Config server" class="md-nav__link">
+    Config server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-code" title="Get the code" class="md-nav__link">
+    Get the code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-jatanaai" title="Test JatanaAI" class="md-nav__link">
+    Test JatanaAI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-serving-server" title="Setting up Serving Server" class="md-nav__link">
+    Setting up Serving Server
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config-server_1" title="Config server" class="md-nav__link">
+    Config server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-gcfuse" title="Setup GCFuse" class="md-nav__link">
+    Setup GCFuse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-code_1" title="Get the code" class="md-nav__link">
+    Get the code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-tensorflow-serving-docker-image" title="Get Tensorflow serving docker image" class="md-nav__link">
+    Get Tensorflow serving docker image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-serving" title="Run the serving" class="md-nav__link">
+    Run the serving
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" title="Testing" class="md-nav__link">
+    Testing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-status-api" title="Model status API" class="md-nav__link">
+    Model status API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-metadata-api" title="Model Metadata API" class="md-nav__link">
+    Model Metadata API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../apis/" title="Endpoints" class="md-nav__link">
+      Endpoints
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../language/" title="Language" class="md-nav__link">
+      Language
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-upload-server" title="Setting up Upload Server" class="md-nav__link">
+    Setting up Upload Server
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config-server" title="Config server" class="md-nav__link">
+    Config server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-code" title="Get the code" class="md-nav__link">
+    Get the code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-jatanaai" title="Test JatanaAI" class="md-nav__link">
+    Test JatanaAI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-serving-server" title="Setting up Serving Server" class="md-nav__link">
+    Setting up Serving Server
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config-server_1" title="Config server" class="md-nav__link">
+    Config server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-gcfuse" title="Setup GCFuse" class="md-nav__link">
+    Setup GCFuse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-code_1" title="Get the code" class="md-nav__link">
+    Get the code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-tensorflow-serving-docker-image" title="Get Tensorflow serving docker image" class="md-nav__link">
+    Get Tensorflow serving docker image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-serving" title="Run the serving" class="md-nav__link">
+    Run the serving
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" title="Testing" class="md-nav__link">
+    Testing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-status-api" title="Model status API" class="md-nav__link">
+    Model status API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-metadata-api" title="Model Metadata API" class="md-nav__link">
+    Model Metadata API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/jatana-ai/jatana-nlp-microservices/edit/master/docs/installation.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="installation">Installation</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>JatanaAI has been tested with Python 2.7 and 3.6. It is recommended to use it with Python 2.7, we will soon port the complete code on Python3.7 but its not going to impact any interfaces.</p>
+<p>There are primarily 2 server which we need to setup:</p>
+<ol>
+<li>Upload server </li>
+<li>Query Serving Server</li>
+</ol>
+<p><img alt="alt text" src="../_static/images/server_setup.png" title="Server Setup" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Setting up JatanaAI for lots of clients can require high configuration of systems for inferencing.</p>
+</div>
+<h2 id="setting-up-upload-server">Setting up Upload Server</h2>
+<p>Follow the instruction to setup the upload server.</p>
+<h3 id="config-server">Config server</h3>
+<pre><code>
+    sudo apt-get update
+    sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+</code></pre>
+
+<h3 id="get-the-code">Get the code</h3>
+<p>Clone the repository </p>
+<pre><code>
+    git clone https://github.com/jatana-ai/jatana-nlp-microservices
+</code></pre>
+
+<p>Unless you've already got numpy &amp; scipy installed, we highly recommend that you install and use <a class="reference external" href="https://www.anaconda.com/download/" target="_blank">Anaconda</a>.</p>
+<pre><code>    cd jatana-nlp-microservices
+
+    # create a virtual environment
+    virtualenv -p python3.6 JatanaAI
+
+    # activate the virtual environment
+    source jatana-nlp-microservices/bin/activate
+
+    # install dependencies
+    pip install -r requirements.txt 
+
+    # install gcfuse
+    sudo apt-get install gcsfuse
+
+    # setup storage using gcfuse
+    mkdir data  
+    gcsfuse jatana-nlp-storage data/
+
+    # run service
+    ./jatana-ms-upload/ignite.sh
+</code></pre>
+
+<h3 id="test-jatanaai">Test JatanaAI</h3>
+<pre><code>
+    GET locahost:8080/api/ms/v3.0/ignition
+</code></pre>
+
+<p>and returns response</p>
+<pre><code>
+    {
+      &quot;Engine Status&quot; : &quot;Microservice for UPLOAD is alive and kicking&quot;
+    }
+</code></pre>
+
+<h2 id="setting-up-serving-server">Setting up Serving Server</h2>
+<h3 id="config-server_1">Config server</h3>
+<pre><code>
+    sudo apt-get update
+    sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+    sudo apt-get install gcsfuse
+    sudo apt install docker.io
+</code></pre>
+
+<h3 id="setup-gcfuse">Setup GCFuse</h3>
+<pre><code>
+    export GCSFUSE_REPO=gcsfuse-`lsb_release -c -s`
+    echo &quot;deb http://packages.cloud.google.com/apt $GCSFUSE_REPO main&quot; | sudo tee /etc/apt/sources.list.d/gcsfuse.list
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+
+    sudo apt-get install gcsfuse
+</code></pre>
+
+<h3 id="get-the-code_1">Get the code</h3>
+<p>Clone the repository </p>
+<pre><code>
+    git clone https://github.com/jatana-ai/jatana-nlp-microservices
+    cd /jatana-nlp-microservices/jatana-ms-train-v2/trainer
+    mkdir data
+    gcsfuse --implicit-dirs jatana-nlp-storage data/
+</code></pre>
+
+<h3 id="get-tensorflow-serving-docker-image">Get Tensorflow serving docker image</h3>
+<pre><code>
+    docker pull tensorflow/serving
+</code></pre>
+
+<h3 id="run-the-serving">Run the serving</h3>
+<pre><code>
+    docker run  -p 8500:8500 -p 8501:8501 --mount type=bind,source=/home/projects/jatana-nlp-microservices/jatana-ms-train-v2/trainer/data/export/,target=/models/ -t tensorflow/serving --model_config_file=/models/models.config
+</code></pre>
+
+<h3 id="testing">Testing</h3>
+<p>If everything went fine then the service will be up and running and we can test that by hitting multiple enpoints.</p>
+<h4 id="model-status-api">Model status API</h4>
+<p>If you want to check the status of the model if can be done using</p>
+<p><strong>Request</strong></p>
+<pre><code>
+    GET http://host:port/v1/models/${MODEL_NAME}[/versions/${MODEL_VERSION}]
+</code></pre>
+
+<p><code>/versions/${MODEL_VERSION}</code> is optional. If omitted status for all versions is returned in the response.</p>
+<p><strong>Response</strong></p>
+<pre><code>
+    {
+        &quot;model_version_status&quot;: [
+            {
+                &quot;version&quot;: &quot;3&quot;,
+                &quot;state&quot;: &quot;AVAILABLE&quot;,
+                &quot;status&quot;: {
+                    &quot;error_code&quot;: &quot;OK&quot;,
+                    &quot;error_message&quot;: &quot;&quot;
+                }
+            }
+        ]
+    }
+</code></pre>
+
+<h4 id="model-metadata-api">Model Metadata API</h4>
+<p>It returns the metadata of a model in the ModelServer. It returns the metadata of a model in the ModelServer.</p>
+<p><strong>Request</strong></p>
+<pre><code>
+    GET http://host:port/v1/models/${MODEL_NAME}[/versions/${MODEL_VERSION}]/metadata
+</code></pre>
+
+<p><code>/versions/${MODEL_VERSION}</code> is optional. If omitted status for all versions is returned in the response.</p>
+<p>Example:</p>
+<pre><code>
+    GET http://localhost:8501/v1/models/jatanademo_macro/metadata
+</code></pre>
+
+<p><strong>Response</strong></p>
+<pre><code>
+    {
+        &quot;model_spec&quot;: {
+            &quot;name&quot;: &quot;jatanademo_macro&quot;,
+            &quot;signature_name&quot;: &quot;&quot;,
+            &quot;version&quot;: &quot;3&quot;
+        },
+        &quot;metadata&quot;: {
+            &quot;signature_def&quot;: {
+                &quot;signature_def&quot;: {
+                    &quot;predict&quot;: {
+                        &quot;inputs&quot;: {
+                            &quot;text&quot;: {
+                                &quot;dtype&quot;: &quot;DT_INT32&quot;,
+                                &quot;tensor_shape&quot;: {
+                                    &quot;dim&quot;: [
+                                        {
+                                            &quot;size&quot;: &quot;-1&quot;,
+                                            &quot;name&quot;: &quot;&quot;
+                                        },
+                                        {
+                                            &quot;size&quot;: &quot;100&quot;,
+                                            &quot;name&quot;: &quot;&quot;
+                                        }
+                                    ],
+                                    &quot;unknown_rank&quot;: false
+                                },
+                                &quot;name&quot;: &quot;model_1_input:0&quot;
+                            }
+                        },
+                        &quot;outputs&quot;: {
+                            &quot;scores&quot;: {
+                                &quot;dtype&quot;: &quot;DT_FLOAT&quot;,
+                                &quot;tensor_shape&quot;: {
+                                    &quot;dim&quot;: [
+                                        {
+                                            &quot;size&quot;: &quot;-1&quot;,
+                                            &quot;name&quot;: &quot;&quot;
+                                        },
+                                        {
+                                            &quot;size&quot;: &quot;5&quot;,
+                                            &quot;name&quot;: &quot;&quot;
+                                        }
+                                    ],
+                                    &quot;unknown_rank&quot;: false
+                                },
+                                &quot;name&quot;: &quot;dense_1/Softmax:0&quot;
+                            }
+                        },
+                        &quot;method_name&quot;: &quot;tensorflow/serving/predict&quot;
+                    }
+                }
+            }
+        }
+    }  
+</code></pre>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Get Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Get Started
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../apis/" title="Endpoints" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Endpoints
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Rahul Kumar
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
